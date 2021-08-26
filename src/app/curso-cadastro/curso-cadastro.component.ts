@@ -7,10 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class CursoCadastroComponent {
 
-  @Output () pessoaAdcionada = new EventEmitter()
+  @Output () cursoAdcionado = new EventEmitter()
   
   adcionar (curso, duracao) {
-    this.pessoaAdcionada.emit({curso, duracao})
+    this.cursoAdcionado.emit({curso, duracao})
   }
 
 }
