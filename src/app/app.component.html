@@ -1,39 +1,17 @@
-<div class="containers mt-3 p-5">
+<div class="container mt-3 p-5">
   <h1 class="display-1 text-center p-4">Informações dos Cursos</h1>
 
-  <div class="">
-  <table class="table table-primary table-hover table-stripped">
-    <thead>
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Carga horaria</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Java</td>
-        <td>72h</td>
-      </tr>
-      <tr>
-        <td>Python</td>
-        <td>64h</td>
-      </tr>
-      <tr>
-        <td>Angular</td>
-        <td>92h</td>
-      </tr>
-      <tr>
-        <td>NodeJs</td>
-        <td>64h</td>
-      </tr>
-      <tr>
-        <td>#C</td>
-        <td>120h</td>
-      </tr>
-      <tr>
-        <td>Java Script</td>
-        <td>72h</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row mt-2">
+    <div class="col-md-4 text-center" *ngFor="let curso of cursos">
+      <app-curso-cartao [curso]="curso"></app-curso-cartao>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-curso-cadastro (pessoaAdcionada)="onPessoaAdcionada
+    ($event)"></app-curso-cadastro>
+    
+  </div>
+
 </div>
+
